@@ -1,7 +1,7 @@
-let siteName = document.getElementById('siteName');
-let siteURL = document.getElementById('siteURL');
-let submitBtn = document.getElementById('submitBtn');
-let tableBody = document.getElementById('tableBody');
+const siteName = document.getElementById('siteName');
+const siteURL = document.getElementById('siteURL');
+const submitBtn = document.getElementById('submitBtn');
+const tableBody = document.getElementById('tableBody');
 let bookmarksList = [];
 if (localStorage.getItem("bookmarksList") === null)
     bookmarksList = [];
@@ -60,14 +60,14 @@ siteName.addEventListener('input', nameValidation);
 siteName.addEventListener('blur', nameValidation);
 
 function nameValidation() {
-    let regexName = /^[A-Za-z]{3}/;//To start with capital or small 3 letters at least.
+    const regexName = /^[A-Za-z]{3}/;//To start with capital or small 3 letters at least.
     return regexName.test(siteName.value);
 }
 siteURL.addEventListener('input', urlValidation);
 siteURL.addEventListener('blur', urlValidation);
 
 function urlValidation() {
-    let regexURL = /^https:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b(?:[-a-zA-Z0-9@:%_\+.~#?&//=]*)$/;
+    const regexURL = /^https:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b(?:[-a-zA-Z0-9@:%_\+.~#?&//=]*)$/;
     /* is designed to match and validate URLs that start with https:// and have a domain name consisting of letters (both upper and lower case), numbers, hyphens, and periods. It also allows for optional "www." at the beginning of the domain.*/
     return regexURL.test(siteURL.value);
 }
@@ -128,8 +128,8 @@ function sweetAlert() {
         html: `
            <p>Please follow the rules below :</p>
         <div class="sweetAlert-rules">
-        <p class="text-left"><span class="fa fa-arrow-right"></span> Site name must contain at least 3 characters</p>
-        <p class="text-left"><span class="fa fa-arrow-right"></span> Site URL must be a valid one</p>
+        <p><span class="fa fa-arrow-right"></span> Site name must contain at least 3 characters</p>
+        <p><span class="fa fa-arrow-right"></span> Site URL must be a valid one</p>
          </div>
         `,
     });
