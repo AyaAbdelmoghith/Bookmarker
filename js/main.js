@@ -95,7 +95,7 @@ siteURL.addEventListener('input', urlValidation);
 siteURL.addEventListener('blur', urlValidation);
 
 function urlValidation() {
-    const urlRegex = /^(?:https?:\/\/)|(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b(?:[-a-zA-Z0-9@:%_\+.~#?&//=]*)$/;
+    const regexURL = /^(?:https?:\/\/)|(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b(?:[-a-zA-Z0-9@:%_\+.~#?&//=]*)$/;
     /* is designed to match and validate URLs that start with https:// and have a domain name consisting of letters (both upper and lower case), numbers, hyphens, and periods. It also allows for optional "www." at the beginning of the domain.*/
     return regexURL.test(siteURL.value);
 }
