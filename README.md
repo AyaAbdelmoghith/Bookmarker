@@ -5,7 +5,7 @@ The Bookmarker system is built using cutting-edge technologies:</br>
 HTML5 [Semantic Tags]</br>
 CSS3 [Media Query]</br>
 Bootstrap5 [Utilities, and Layout]</br>
-JS [Objects, Array, DOM Selection, DOM Manipulation, Event Listener, and CSS Manipulation]</br>
+JS [Objects, Array, DOM Selection, DOM Manipulation, Event Listener, CSS Manipulation, and Local Storage]</br>
 
 📝 Bookmark Fields:</br>
 Each bookmark has two essential fields:</br>
